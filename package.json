@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "bin": {
-    "localize": "./dest/localize.js"
+    "localize": "./dest/localizecss.js"
   },
   "scripts": {
     "start": "node dest/localizecss.js",

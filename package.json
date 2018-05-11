@@ -1,0 +1,26 @@
+{
+  "name": "localizecss",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "localize": "./dest/localize.js"
+  },
+  "scripts": {
+    "start": "node dest/localizecss.js",
+    "build": "tsc -p src/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HirokiMiyaoka/LocalizeCSS.git"
+  },
+  "author": "Hiroki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HirokiMiyaoka/LocalizeCSS/issues"
+  },
+  "homepage": "https://github.com/HirokiMiyaoka/LocalizeCSS#readme",
+  "devDependencies": {
+    "@types/node": "^10.0.8"
+  }
+}

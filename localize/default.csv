@@ -1,2 +1,2 @@
 .start:before,Start
-.end:before,End
+.end:after,End

@@ -25,7 +25,11 @@ class LocalizeCSS {
                 if (!s) {
                     return;
                 }
-                data.push({ selector: s, word: w, css: c.join(',') });
+                const csv = { selector: s, word: w, css: c.join(',') };
+                if (!s.match(/\:(before|after)$/)) {
+                    csv.selector += ':before';
+                }
+                data.push(csv);
             });
             read.on('close', () => { resolve(data); });
             read.on('SIGCONT', () => { reject(); });

@@ -49,7 +49,9 @@ class LocalizeCSS
 				if ( count++ < ignore || !line ) { return; }
 				const [ s, w, ...c ] = line.split( ',' );
 				if ( !s ) { return; }
-				data.push( { selector: s, word: w, css: c.join( ',' ) } );
+				const csv: CSV_DATA = { selector: s, word: w, css: c.join( ',' ) };
+				if ( !s.match( /\:(before|after)$/ ) ) { csv.selector += ':before'; }
+				data.push( csv );
 			} );
 			read.on( 'close', () => { resolve( data ); } );
 			read.on( 'SIGCONT', () => { reject(); } );

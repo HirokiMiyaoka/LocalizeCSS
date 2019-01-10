@@ -141,7 +141,7 @@ class LocalizeCSS
 	{
 		const p = this.files.map( ( f ) =>
 		{
-			return this.convertCSVtoCSS( f ).then( ( css ) => { return this.output( path.join( dir, f + '.css' ), f === this.config.default ? '' : ( '.' + f + ' ' ), css ); } );
+			return this.convertCSVtoCSS( f ).then( ( css ) => { return this.output( path.join( dir, f + '.css' ), f === this.config.default ? '' : ( 'body[lang="' + f + '"] ' ), css ); } );
 		} );
 		return Promise.all( p );
 	}

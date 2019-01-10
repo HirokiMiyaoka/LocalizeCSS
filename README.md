@@ -34,7 +34,7 @@ body[lang="jp"] .start:before { content: 'スタート'; }
 `npm i HirokiMiyaoka/LocalizeCSS` でインストールした場合
 
 ```
-node node_modules/localizecss/dest/localizecss.js -- [OPTIONS...] [SRC] [DEST]
+node node_modules/localizecss/dest/localizecss.js [OPTIONS...] [SRC] [DEST]
 ```
 
 オプションは以下
